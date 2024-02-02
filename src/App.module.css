@@ -1,0 +1,37 @@
+.app {
+  width: 100%;
+  min-height: 100dvh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  background: url(public/background2.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 10px 20px;
+}
+
+.title {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.main {
+  font-size: 36px;
+  color: rgb(150, 0, 0);
+  text-shadow: 0 0 5px rgb(255, 255, 255);
+  font-weight: bold;
+  padding: 20px 10px;
+  margin-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.507);
+  border-radius: 50%;
+}
+
+.descr {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
