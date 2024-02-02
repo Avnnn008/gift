@@ -37,7 +37,7 @@ const [limit, setLimit] = useState(false)
        if (/ris/.test(name)) {
         return <div className={s.gift}>
         <p>Подарок от нейросети!</p>
-        <a href={`/${name}.png`} target='_blank'><img src={`/${name}.png`} alt="" /></a>
+        <a href={`/${name}.png`} target='blank'><img src={`/${name}.png`} alt="" /></a>
         </div>
        } else if (/sweet/.test(name)) {
         return (
