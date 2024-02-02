@@ -23,7 +23,7 @@
 }
 
 .opened {
-    background: url(box.png);
+    background: url(gift/box.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
@@ -56,7 +56,7 @@
     width: 90%;
     max-width: 400px;
     height: 50%;
-    background: url(box.png);
+    background: url(gift/box.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;

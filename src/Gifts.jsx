@@ -37,27 +37,27 @@ const [limit, setLimit] = useState(false)
        if (/ris/.test(name)) {
         return <div className={s.gift}>
         <p>Подарок от нейросети!</p>
-        <a href={`/${name}.png`} target='blank'><img src={`/${name}.png`} alt="" /></a>
+        <a href={`${name}.png`} target='blank'><img src={`${name}.png`} alt="" /></a>
         </div>
        } else if (/sweet/.test(name)) {
         return (
             <div className={s.gift}>
         <p>Сладкий подарок!</p>
-        <img src={`/${name}.png`} alt="" />
+        <img src={`${name}.png`} alt="" />
         </div>
         )
        } else if (/sert/.test(name)) {
         return (
             <div className={s.gift}>
         <p>Что-то приятное!</p>
-        <img src={`/${name}.png`} alt="" />
+        <img src={`${name}.png`} alt="" />
         </div>
         )
        } else if (/otkr/.test(name)) {
         return (
             <div className={s.gift}>
         <p>Как же без открытки!</p>
-        <img src={`/${name}.png`} alt="" />
+        <img src={`${name}.png`} alt="" />
         </div>
         )
        }
