@@ -23,6 +23,7 @@
 }
 
 .opened {
+    background-color: transparent;
     background-image: url(/gift/box.png);
     background-size: contain;
     background-repeat: no-repeat;
