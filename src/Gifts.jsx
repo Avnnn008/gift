@@ -27,7 +27,7 @@ const [limit, setLimit] = useState(false)
                 }
                 
             } else {
-                setOpen(null)
+                setOpen(name)
             }
             
       
@@ -44,6 +44,7 @@ const [limit, setLimit] = useState(false)
             <div className={s.gift}>
         <p>Сладкий подарок!</p>
         <img src={`${name}.png`} alt="" />
+        <p className={s.place}>{/1$/.test(name) ? 'Поищи за картошкой' : 'Ищи на верхней полке будущего душа'}</p>
         </div>
         )
        } else if (/sert/.test(name)) {
@@ -51,6 +52,7 @@ const [limit, setLimit] = useState(false)
             <div className={s.gift}>
         <p>Что-то приятное!</p>
         <img src={`${name}.png`} alt="" />
+        <p className={s.place}>{/1$/.test(name) ? 'Ищи в Спартаке в черной обложке' : /2$/.test(name) ? 'Ищи в куче бумаг' : 'Ищи в моей самой большой дамской сумке'}</p>
         </div>
         )
        } else if (/otkr/.test(name)) {
@@ -58,6 +60,7 @@ const [limit, setLimit] = useState(false)
             <div className={s.gift}>
         <p>Как же без открытки!</p>
         <img src={`${name}.png`} alt="" />
+        <p className={s.place}>Ищи там, где лежит Данилка</p>
         </div>
         )
        }
