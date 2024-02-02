@@ -84,6 +84,8 @@
 
 .place {
     font-size: 16px;
+    word-wrap: break-word;
+    padding: 0 30%;
 }
 
 .gift a {

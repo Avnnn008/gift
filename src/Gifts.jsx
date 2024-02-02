@@ -11,8 +11,8 @@ const [limit, setLimit] = useState(false)
 
     useEffect(()=> {
         time.current = localStorage.getItem('time')
-        // GIFTS.map(el=>localStorage.removeItem(el))
-        // localStorage.removeItem('time')
+        GIFTS.map(el=>localStorage.removeItem(el))
+        localStorage.removeItem('time')
     })
 
     function openGift(name) {
@@ -60,7 +60,7 @@ const [limit, setLimit] = useState(false)
             <div className={s.gift}>
         <p>Как же без открытки!</p>
         <img src={`${name}.png`} alt="" />
-        <p className={s.place}>Ищи там, где лежит Данилка</p>
+        <p className={s.place}>Ищи там, где лежит лицо Данилки</p>
         </div>
         )
        }
