@@ -11,8 +11,8 @@ const [limit, setLimit] = useState(false)
 
     useEffect(()=> {
         time.current = localStorage.getItem('time')
-        GIFTS.map(el=>localStorage.removeItem(el))
-        localStorage.removeItem('time')
+        // GIFTS.map(el=>localStorage.removeItem(el))
+        // localStorage.removeItem('time')
     })
 
     function openGift(name) {
