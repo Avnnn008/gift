@@ -1,0 +1,36 @@
+.timer {
+    position: absolute;
+    width: 40%;
+    top: -15px;
+    left: 30%;
+    border: 3px double rgb(122, 0, 0);
+    padding: 2px;
+    border-radius: 10px;
+    background: linear-gradient(rgb(189, 189, 189), white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+}
+
+.image {
+    background-image: url(/gift/littlebox.png);
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.time {
+    width: 70%;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+}
+
+.time i {
+    padding-left: 7px;
+    color: rgb(177, 0, 0);
+    font-size: 18px;
+    font-weight: bold;
+}

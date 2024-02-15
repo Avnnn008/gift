@@ -1,37 +1,65 @@
+
+
 .app {
   width: 100%;
-  min-height: 100dvh;
-  overflow-y: auto;
+  min-height: 100%;
+  padding: 40% 10px 40px 10px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  align-items: center;
+  align-items:center;
   justify-content: center;
-  background-image: url(/gift/background2.jpg);
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  padding: 10px 20px;
 }
 
 .title {
   text-align: center;
-  font-size: 16px;
-  margin-bottom: 30px;
 }
 
 .main {
-  font-size: 36px;
-  color: rgb(150, 0, 0);
+  font-family: 'Pacifico', cursive;
+  font-size: 58px;
+  line-height: 1em;
+  text-align: center;
+  color: rgb(199, 0, 0);
   text-shadow: 0 0 5px rgb(255, 255, 255);
   font-weight: bold;
-  padding: 20px 10px;
-  margin-bottom: 10px;
-  background-color: rgba(255, 255, 255, 0.507);
-  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.descrbg {
+  background-image: url(/gift/textbg.png);
+  width: 95vw;
+  max-width: 500px;
+  height: 95vw;
+  max-height: 500px;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
 }
 
 .descr {
+  position: absolute;
+  top: 5%;
+  left: 6%;
   color: rgb(0, 0, 0);
-  font-weight: bold;
+  font-family: "Caveat", cursive;
+  font-size: 20px;
+  line-height: 1.1em;
+  width: 57%;
+  max-width: calc(500px * 0.57);
+  height: calc(95vw * 0.55);
+  max-height: calc(500px * 0.55);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-3.2deg);
+  padding: 2px 5px;
 }
+
+
+.descr div:nth-of-type(1) {
+  transform: rotate(0.8deg);
+}
+
+
