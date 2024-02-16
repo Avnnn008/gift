@@ -5,7 +5,6 @@
     flex-wrap: wrap;
     align-items:center;
     justify-content: center;
-    row-gap: 10px;
     column-gap: 10px;
     background-color: rgba(241, 209, 209, 0.466);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.507);
@@ -28,7 +27,7 @@
 
 /* Подарки box - закрытые, opened - открытые */
 .box, .opened {
-    width: 110px;
+    width: 30%;
     height: 120px;
     background-size: contain;
     background-repeat: no-repeat;
@@ -67,7 +66,7 @@ postcard - 0 размер, bigpostcard - размер после открыти�
 
 .postcard {
     position: absolute;
-    z-index: 2;
+    /* z-index: 2; */
     background-image: url(/gift/postcard.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -92,7 +91,7 @@ postcard - 0 размер, bigpostcard - размер после открыти�
 /* Модальное окно */
 .modal {
     position: fixed;
-    z-index: 3;
+    /* z-index: 3; */
     top: 0;
     left: 0;
     width: 100%;
@@ -153,6 +152,7 @@ postcard - 0 размер, bigpostcard - размер после открыти�
 }
 
 .warning {
+    min-width: 20vw;
     font-size: 20px;
     line-height: 20px;
     min-height: 120px;

@@ -25,3 +25,9 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+
+@media screen and (min-width: 900px) {
+  #root {
+    background-position: center -150px;
+  }
+}

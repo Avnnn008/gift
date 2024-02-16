@@ -14,7 +14,7 @@ export default function Gifts() {
       text: 'В куче документов иногда скрывается не документ...',
     },
     'gift4': {
-      text: 'В этом месте не только Санокс и Ричин и шампунь... '
+      text: 'В этом месте не только Санокс и Ричин шампунь... '
     },
     'gift5': {
       text: 'Там был MSI KATANA 17...'
@@ -23,7 +23,7 @@ export default function Gifts() {
       text: 'Посмотри за тем, что Гера видит во время еды...'
     },
     'gift7': {
-      text: 'Иногда в кармане осенней куртки можно найти не только мелочь...'
+      text: 'Ищи в пакете, лежащем под кожей и мехом...'
     },
     'gift8': {
       text: 'Загляни в серую вещь, которая еще вчера была в Рязани...'
@@ -33,13 +33,14 @@ export default function Gifts() {
     },
   }
 
-  const LIMIT_TIME = 1000*20
+  const LIMIT_TIME = 1000*60*60
   const [open, setOpen] = useState(null); //открытие подарка
   const [limit, setLimit] = useState(false); //сообщение об ограничении открытия подарка
   const [nextOpeningTime, setNextOpeningTime] = useState(Date.now()); //время следующего доступа к подарку
   const [openGiftsCount, setOpenGiftsCount] = useState(0); //количество открытых подарков
   const giftsCount = Object.keys(GIFTS).length; //общее количество подарков
   const postcardRef = useRef(null)
+  const openGiftsInThisSession = useRef([]) 
 
   useEffect(() => {
     setNextOpeningTime(
@@ -86,6 +87,7 @@ export default function Gifts() {
     if (!localStorage.getItem(name)) {
       if (Date.now() > nextOpeningTime) {  
         openPostcard(postcard)
+        openGiftsInThisSession.current.push(name)
         setOpen(name);
         let time = Date.now() + LIMIT_TIME;
         let updatedOpenGiftsCount = openGiftsCount + 1;
@@ -99,8 +101,11 @@ export default function Gifts() {
         setLimit(true);
       }
     } else {
-      openPostcard(postcard, true)
+      let reopening = openGiftsInThisSession.current.includes(name)
+      console.log(reopening, openGiftsInThisSession.current)
+      openPostcard(postcard, reopening)
       setOpen(name);
+      openGiftsInThisSession.current.push(name)
     }
   }
 
